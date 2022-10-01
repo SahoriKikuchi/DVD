@@ -16,18 +16,14 @@
         <title>Classificações Cadastradas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="${cp}/css/estilos.css"/>
+        <link rel="stylesheet" href="${cp}/css/style.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     </head>
     <body>
-        <h1>Classificações Cdastradas</h1>
+        <h1>Classificações Cadastradas</h1>
 
-        <p>
-            <a href="${cp}/formularios/classificacao/novo.jsp">
-                Nova classificação
-            </a>
-        </p>
-
-        <table class="tabelaListagem">
+        <table>
             <thead>
                 <tr>
                     <th>Descrição</th>
@@ -49,20 +45,26 @@
                         
                         <td>
                             <a href="${cp}/${prefixo}Alteracao&id=${classificacoes.id}">
-                                Alterar
+                                <i class="material-icons">edit_square</i>
                             </a>
                         </td>
                         <td>
                             <a href="${cp}/${prefixo}Exclusao&id=${classificacoes.id}">
-                                Excluir
+                                <i class="material-icons">delete</i>
                             </a>
                         </td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
-
-        <button class = "retorno">
+<br>
+        <div class = "frame">
+        <button class = "custom-btn btn-4">
+            <a href="${cp}/formularios/classificacao/novo.jsp" >
+                Nova classificação
+            </a>
+        </button>
+        <button class = "custom-btn btn-4">
             <a href="${cp}/index.jsp">Tela Inicial</a>
         </button>
     </body>

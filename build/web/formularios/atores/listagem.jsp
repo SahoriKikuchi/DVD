@@ -16,58 +16,60 @@
         <title>Atores Cadastrados</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="${cp}/css/estilos.css"/>
+        <link rel="stylesheet"  type="text/css" href="${cp}/css/style.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
         <h1>Atores Cadastrados</h1>
 
-        <p>
-            <a href="${cp}/formularios/atores/novo.jsp">
-                Novo Ator
-            </a>
-        </p>
-
-        <table class="tabelaListagem">
+        <table>
             <thead>
                 <tr>
                     <th>Nome</th>
                     <th>Sobrenome</th>
                     <th>Data de Estreia</th>
-                    <th>Alterar</th>
-                    <th>Excluir</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
 
-                <jsp:useBean
-                    id="servicos"
-                    scope="page"
-                    class="locacaodvds.servicos.AtoresServices"/>
+<jsp:useBean
+    id="servicos"
+    scope="page"
+    class="locacaodvds.servicos.AtoresServices"/>
 
-                <c:forEach items="${servicos.todos}" var="atores">
+<c:forEach items="${servicos.todos}" var="atores">
                     <tr>
 
                         <td>${atores.nome}</td>
                         <td>${atores.sobrenome}</td>
                         <td>${atores.dataDeEstreia}</td>
 
-                        <td>
+                        <td class = "tdIcon">
                             <a href="${cp}/${prefixo}Alteracao&id=${atores.id}">
-                                Alterar
+                                <i class="material-icons">edit_square</i>
                             </a>
                         </td>
-                        <td>
+                        <td class = "tdIcon">
                             <a href="${cp}/${prefixo}Exclusao&id=${atores.id}">
-                                Excluir
+                                <i class="material-icons">delete</i>
                             </a>
                         </td>
                     </tr>
-                </c:forEach>
+</c:forEach>
             </tbody>
         </table>
-
-        <button class = "retorno">
-            <a href="${cp}/index.jsp">Tela Inicial</a>
-        </button>
+        <br>
+        <div class = "frame">
+            <button class = "custom-btn btn-4">
+                <a href="${cp}/formularios/atores/novo.jsp" >
+                    Novo Ator
+                </a>
+            </button>
+            <button class = "custom-btn btn-4">
+                <a href="${cp}/index.jsp">Tela Inicial</a>
+            </button>
+        </div>
     </body>
 </html>

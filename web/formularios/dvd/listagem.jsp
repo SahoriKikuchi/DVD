@@ -11,74 +11,75 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Dvds Cadastrados</title>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="${cp}/css/estilos.css"/>
-  </head>
+    <head>
+        <title>Dvds Cadastrados</title>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="${cp}/css/style.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <body>
+    </head>
 
-    <h1>Dvds Cadastrados</h1>
+    <body>
 
-    <p>
-      <a href="${cp}/formularios/dvd/novo.jsp">
-        Novo DVD
-      </a>
-    </p>
+        <h1>Dvds Cadastrados</h1>
 
-    <table class="tabelaListagem">
-      <thead>
-        <tr>
-          <th>Titulo</th>
-          <th>Ano de Lançamento</th>
-          <th>Ator Principal</th>
-          <th>Ator Coadjuvante</th>
-          <th>Data de Lançamento</th>
-          <th>Duracao</th>
-          <th>Gênero</th>
-          <th>Classificação</th>
-          <th>Alterar</th>
-          <th>Excluir</th>
-        </tr>
-      </thead>
-      <tbody>
+        <p>
+            <a href="${cp}/formularios/dvd/novo.jsp">
+                Novo DVD
+            </a>
+        </p>
 
-        <jsp:useBean
-            id="servicos"
-            scope="page"
-            class="locacaodvds.servicos.DvdServices"/>
+        <table>
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Ano de Lançamento</th>
+                    <th>Ator Principal</th>
+                    <th>Ator Coadjuvante</th>
+                    <th>Data de Lançamento</th>
+                    <th>Duracao</th>
+                    <th>Gênero</th>
+                    <th>Classificação</th>
+                    <th>Alterar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        <c:forEach items="${servicos.todos}" var="dvd">
-          <tr>
-            <td>${dvd.id}</td>
-            <td>${dvd.titulo}</td>
-            <td>${dvd.anoDeLancamento}</td>
-            <td>${dvd.atores.nome}</td>
-            <td>${dvd.duracao}</td>
-            
-            <td>
-              <a href="${cp}/${prefixo}Alteracao&id=${dvd.id}">
-                Alterar
-              </a>
-            </td>
-            <td>
-              <a href="${cp}/${prefixo}Exclusao&id=${dvd.id}">
-                Excluir
-              </a>
-            </td>
-          </tr>
-        </c:forEach>
-      </tbody>
-    </table>
+                <jsp:useBean
+                    id="servicos"
+                    scope="page"
+                    class="locacaodvds.servicos.DvdServices"/>
+
+                <c:forEach items="${servicos.todos}" var="dvd">
+                    <tr>
+                        <td>${dvd.id}</td>
+                        <td>${dvd.titulo}</td>
+                        <td>${dvd.anoDeLancamento}</td>
+                        <td>${dvd.atores.nome}</td>
+                        <td>${dvd.duracao}</td>
+
+                        <td>
+                            <a href="${cp}/${prefixo}Alteracao&id=${dvd.id}">
+                                <i class="material-icons">edit_square</i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="${cp}/${prefixo}Exclusao&id=${dvd.id}">
+                                <i class="material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
 
 
-    <p><a href="${cp}/index.jsp">Tela Principal</a></p>
+        <p><a href="${cp}/index.jsp">Tela Principal</a></p>
 
-  </body>
+    </body>
 
 </html>
 

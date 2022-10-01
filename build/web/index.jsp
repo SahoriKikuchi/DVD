@@ -10,30 +10,62 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Locadora</title>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="${cp}/css/estilos.css"/>
-  </head>
+    <head>
+        <title>Locadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  type="text/css" href="${cp}/css/style.css"/>
 
-  <body>
+    </head>
 
-    <h1>Locadora de DVD</h1>
-    <p>
-      <a href="${cp}/formularios/dvd/listagem.jsp">DVD</a>
-    </p>
-    <p>
-      <a href="${cp}/formularios/atores/listagem.jsp">Atores</a>
-    </p>
-    <p>
-      <a href="${cp}/formularios/classificacao/listagem.jsp">Classificação</a>
-    </p>
-    <p>
-      <a href="${cp}/formularios/generos/listagem.jsp">Gêneros</a>
-    </p>
+    <body>
 
-  </body>
+        <h1>Locadora de DVD</h1>
 
+        <div class = "cards-list">
+            <div class ="card">
+                <div class ="card_img">
+                    <img src="${cp}/img/img-dvd.jpg">
+                </div>
+                <div class="card_title title-white">
+                    <p>
+                        <a href="${cp}/formularios/dvd/listagem.jsp">DVD</a>
+                    </p>
+                </div>
+            </div>
+            <div class ="card">
+                <div class ="card_img">
+                    <img src="${cp}/img/img-atores.jpg">
+                </div>
+                <div class="card_title title-white">
+                    <p>
+                        <a href="${cp}/formularios/atores/listagem.jsp">Atores</a>
+                    </p>
+                </div>
+            </div>
+            <div class ="card">
+                <div class ="card_img">
+                    <img src="${cp}/img/img-classificacao.jpg">
+                </div>
+                <div class="card_title title-white">
+                    <p>
+                        <a href="${cp}/formularios/classificacao/listagem.jsp">Classificação</a>
+                    </p>
+                </div>
+            </div>
+            <div class ="card">
+                <div class ="card_img">
+                    <img src="${cp}/img/img-generos.jpg">
+                </div>
+                <div class="card_title title-white">
+                    <p>
+                        <a href="${cp}/formularios/generos/listagem.jsp">Gêneros</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+                    
+    </body>
+    
 </html>
