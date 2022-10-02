@@ -13,6 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Alterar</title>
+        <link rel="stylesheet" href="${cp}/css/style.css"/>
     </head>
     <body>
 
@@ -52,18 +53,15 @@
                    value="${requestScope.atores.dataDeEstreia}"/>
           </td>
         </tr>
-        <tr>
-          <td>
+         </table>
+         <div class="frame"> 
+          <button class = "custom-btn">
             <a href="${cp}/formularios/atores/listagem.jsp">
               Voltar
             </a>
-          </td>
-          <td class="alinharDireita">
-            <input type="submit" value="Alterar"/>
-          </td>
-        </tr>
-      </table>
-
+         </button>
+         <input type="submit" value="Alterar"/>
+         </div>
     </form>
 
   </body>

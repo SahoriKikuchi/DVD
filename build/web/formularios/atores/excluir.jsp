@@ -12,10 +12,8 @@
     <head>
         <title>Excluir Atores</title>
         <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"
-              href="${cp}/css/estilos.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="${cp}/css/style.css"/>
     </head>
 
     <body>
@@ -30,28 +28,27 @@
             <table>
                 <tr>
                     <td class="alinharDireita">Nome:</td>
-                    <td>${requestScope.atores.nome}</td>
+                    <td class="alinharEsquerda">${requestScope.atores.nome}</td>
                 </tr>
                 <tr>
                     <td class="alinharDireita">Sobrenome:</td>
-                    <td>${requestScope.atores.sobrenome}</td>
+                    <td class="alinharEsquerda">${requestScope.atores.sobrenome}</td>
                 </tr>
                 <tr>
                     <td class="alinharDireita">Data de Estreia: </td>
-                    <td>${requestScope.atores.dataDeEstreia}</td>
+                    <td class="alinharEsquerda">${requestScope.atores.dataDeEstreia}</td>
                 </tr>
-                <tr>
-                    <td>
-                        <a href="${cp}/formularios/atores/listagem.jsp">
-                            Voltar
-                        </a>
-                    </td>
-                    <td class="alinharDireita">
-                        <input type="submit" value="Excluir"/>
-                    </td>
-                </tr>
+
             </table>
 
+            <div class="frame">
+                <button class="custom-btn">
+                    <a href="${cp}/formularios/atores/listagem.jsp">
+                        Voltar
+                    </a>
+                </button>
+                <input type="submit" value="Excluir"/>
+            </div>
         </form>
 
     </body>

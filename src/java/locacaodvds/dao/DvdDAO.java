@@ -17,9 +17,7 @@ import locacaodvds.entidade.Genero;
  * @author Amanda e Lucas
  */
 public class DvdDAO extends DAO<Dvd> {
-    
-        
-    
+
     public DvdDAO() throws SQLException {
     }
 
@@ -27,41 +25,72 @@ public class DvdDAO extends DAO<Dvd> {
     public void salvar(Dvd obj) throws SQLException {
 
         PreparedStatement stmt = getConnection().prepareStatement(
-                "INSERT INTO " + 
-                "dvd(" + 
-                "    titulo, " + 
-                "    anoDeLancamento, " + 
-                "    atorPrincipal_id, " + 
-                "    atorCoadjuvante_id, " + 
-                "    genero_id, " + 
-                "    classificacao_id, " + 
-                "    dataDeLancamento, " + 
-                "    duracao" +  
-                "VALUES( ?, ?, ?, ?, ?, ?, ?, ? );" );
-        
+                "INSERT INTO "
+                + "dvd("
+                + "    titulo, "
+                + "    anoDeLancamento, "
+                + "    atorPrincipal_id, "
+                + "    atorCoadjuvante_id, "
+                + "    genero_id, "
+                + "    classificacao_id, "
+                + "    dataDeLancamento, "
+                + "    duracao )"
+                + "VALUES( ?, ?, ?, ?, ?, ?, ?, ? );");
+
         stmt.setString(1, obj.getTitulo());
-        System.out.println("aaa");
-        stmt.set(2, (obj.getAnoDeLancamento());
-        System.out.println("vvvvvv");
+        stmt.setInt(2, (obj.getAnoDeLancamento().getValue()));
         stmt.setInt(3, obj.getAtorPrincipal());
         stmt.setInt(4, obj.getAtorCoadjuvante());
         stmt.setInt(5, obj.getGenero().getId());
         stmt.setInt(6, obj.getClassificacao().getId());
         stmt.setDate(7, obj.getDataDeLancamento());
         stmt.setInt(8, obj.getDuracao());
-        
+
         stmt.executeUpdate();
         stmt.close();
     }
 
     @Override
     public void atualizar(Dvd obj) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        PreparedStatement stmt = getConnection().prepareStatement(
+                "UPDATE dvd "
+                + "SET"
+                + "    titulo = ?, "
+                + "    anoDeLancamento = ?, "
+                + "    atorPrincipal_id = ?, "
+                + "    atorCoadjuvante_id = ?, "
+                + "    genero_id = ?, "
+                + "    classificacao_id = ?, "
+                + "    dataDeLancamento = ?, "
+                + "    duracao = ? "
+                + "WHERE"
+                + "    id = ?;");
+
+        stmt.setString(1, obj.getTitulo());
+        stmt.setInt(2, (obj.getAnoDeLancamento().getValue()));
+        stmt.setInt(3, obj.getAtorPrincipal());
+        stmt.setInt(4, obj.getAtorCoadjuvante());
+        stmt.setInt(5, obj.getGenero().getId());
+        stmt.setInt(6, obj.getClassificacao().getId());
+        stmt.setDate(7, obj.getDataDeLancamento());
+        stmt.setInt(8, obj.getDuracao());
+        stmt.setInt(9, obj.getId());
+
+        stmt.executeUpdate();
+        stmt.close();
     }
 
     @Override
     public void excluir(Dvd obj) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        PreparedStatement stmt = getConnection().prepareStatement(
+                "DELETE FROM dvd "
+                + "WHERE"
+                + "    id = ?;");
+
+        stmt.setInt(1, obj.getId());
+
+        stmt.executeUpdate();
+        stmt.close();
     }
 
     @Override
@@ -81,8 +110,7 @@ public class DvdDAO extends DAO<Dvd> {
                 + "    atores a, "
                 + "    genero g "
                 + "WHERE"
-                + "    d.dvd_id = d.id ");
-
+                + "    d.atorPrincipal_id = a.id ;");
 
         ResultSet rs = stmt.executeQuery();
 
@@ -94,20 +122,20 @@ public class DvdDAO extends DAO<Dvd> {
             Genero g = new Genero();
 
             d.setId(rs.getInt("idDvd"));
-            d.setTitulo(rs.getString("titulo"));
-            d.setAnoDeLancamento(Year.parse(rs.getString("anoDeLancamento")));
-            d.setDuracao(rs.getInt("duracao"));
+            d.setTitulo(rs.getString("tituloDvd"));
+//            d.setAnoDeLancamento(Year.parse(rs.getString("anoDeLancamento")));
+//            d.setDuracao(rs.getInt("duracao"));
 
             a.setId(rs.getInt("idAtores"));
-            a.setNome(rs.getString("nome"));
-            a.setSobrenome(rs.getString("sobrenome"));
-            a.setDataDeEstreia(rs.getDate("dataDeEstreia"));
+            a.setNome(rs.getString("nomeAtores"));
+            a.setSobrenome(rs.getString("sobrenomeAtores"));
+//            a.setDataDeEstreia(rs.getDate("dataDeEstreia"));
 
-            c.setId(rs.getInt("idClassificacao"));
-            c.setDescricao(rs.getString("descricao"));
+//            c.setId(rs.getInt("idClassificacao"));
+//            c.setDescricao(rs.getString("descricao"));
 
-            g.setId(rs.getInt("idGenero"));
-            g.setGenero(rs.getString("genero"));
+//            g.setId(rs.getInt("idGenero"));
+//            g.setGenero(rs.getString("genero"));
 
             lista.add(d);
 

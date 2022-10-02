@@ -12,10 +12,8 @@
     <head>
         <title>Excluir Generos</title>
         <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"
-              href="${cp}/css/estilos.css"/>
+        <meta name="viewport"2 content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="${cp}/css/style.css"/>
     </head>
 
     <body>
@@ -32,17 +30,17 @@
                     <td class="alinharDireita">Genero:</td>
                     <td>${requestScope.generos.genero}</td>
                 </tr>
-                <tr>
-                    <td>
-                        <a href="${cp}/formularios/generos/listagem.jsp">
-                            Voltar
-                        </a>
-                    </td>
-                    <td class="alinharDireita">
-                        <input type="submit" value="Excluir"/>
-                    </td>
-                </tr>
+
             </table>
+
+            <div class = "frame">
+                <button class = "custom-btn btn-4">
+                    <a href="${cp}/formularios/generos/listagem.jsp" >
+                        Voltar
+                    </a>
+                </button>
+                <input type="submit" value="Excluir"/>
+            </div>
 
         </form>
 

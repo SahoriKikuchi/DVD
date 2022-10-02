@@ -17,8 +17,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${cp}/css/style.css"/>
-    
-    
+
   </head>
 
   <body>
@@ -31,8 +30,8 @@
 
       <table>
         <tr>
-          <td class="alinharDireita">Nome:</td>
-          <td>
+          <td class="alinharCentro">Nome:</td>
+          <td class="alinharEsquerda">
             <input name="nome"
                    type="text"
                    size="20"
@@ -41,8 +40,8 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">Sobrenome</td>
-          <td>
+          <td class="alinharCentro">Sobrenome</td>
+          <td class="alinharEsquerda">
             <input name="sobrenome"
                    type="text"
                    size="20"
@@ -51,8 +50,8 @@
           </td>
         </tr>
         <tr>
-          <td class="alinharDireita">Data de Estreia: </td>
-          <td>
+          <td class="alinharCentro">Data de Estreia: </td>
+          <td class="alinharEsquerda">
             <input name="dataDeEstreia"
                    type="Date"
                    required/>
@@ -66,9 +65,7 @@
                     Voltar
                 </a>
             </button>
-            <button type = "submit" class = "custom-btn btn-4">
-                Salvar
-            </button>
+            <input type="submit" value="Salvar"/>
         </div>
     </form>
 

@@ -10,52 +10,51 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Nova classificacao</title>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="${cp}/css/estilos.css"/>
-    
-    
-  </head>
+    <head>
+        <title>Nova classificacao</title>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+              href="${cp}/css/style.css"/>
 
-  <body>
 
-    <h1>Nova classificacao</h1>
+    </head>
 
-    <form method="post" action="${cp}/processaClassificacao">
+    <body>
 
-      <input name="acao" type="hidden" value="inserir"/>
+        <h1>Nova classificação</h1>
 
-      <table>
-        <tr>
-          <td class="alinharDireita">Descrição: </td>
-          <td>
-            <input name="descricao"
-                   type="text"
-                   size="20"
-                   maxlength="255"
-                   required/>
-          </td>
-        </tr>
-        
-        <tr>
+        <form method="post" action="${cp}/processaClassificacao">
+
+            <input name="acao" type="hidden" value="inserir"/>
+
+            <table>
+                <tr>
+                    <td class="alinharDireita">Descrição: </td>
+                    <td>
+                        <input name="descricao"
+                               type="text"
+                               size="20"
+                               maxlength="255"
+                               required/>
+                    </td>
+                </tr>
+
+                <tr>
+            </table>
             
-          <td>
-            <a href="${cp}/formularios/classificacao/listagem.jsp">
-              Voltar
-            </a>
-          </td>
-          <td class="alinharDireita">
-            <input type="submit" value="Salvar"/>
-          </td>
-        </tr>
-      </table>
+            <div class="frame">
+                <button class="custom-btn">
+                    <a href="${cp}/formularios/classificacao/listagem.jsp">
+                        Voltar
+                    </a>
+                </button>
+                <input type="submit" value="Excluir"/>
+            </div>
 
-    </form>
+        </form>
 
-  </body>
+    </body>
 
 </html>

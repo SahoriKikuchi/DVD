@@ -14,8 +14,7 @@
         <meta charset="UTF-8">
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"
-              href="${cp}/css/estilos.css"/>
+        <link rel="stylesheet" href="${cp}/css/style.css"/>
     </head>
     <body>
 
@@ -29,19 +28,18 @@
             <table>
                 <tr>
                     <td class="alinharDireita">Descrição:</td>
-                    <td>${requestScope.classificacao.descricao}</td>
+                    <td class="alinharEsquerda">${requestScope.classificacao.descricao}</td>
                 </tr>
-                <tr>
-                    <td>
-                        <a href="${cp}/formularios/classificacao/listagem.jsp">
-                            Voltar
-                        </a>
-                    </td>
-                    <td class="alinharDireita">
-                        <input type="submit" value="Excluir"/>
-                    </td>
-                </tr>
+               
             </table>
+                <div class="frame">
+                <button class="custom-btn">
+                    <a href="${cp}/formularios/classificacao/listagem.jsp">
+                        Voltar
+                    </a>
+                </button>
+                <input type="submit" value="Excluir"/>
+            </div>
 
         </form>
 

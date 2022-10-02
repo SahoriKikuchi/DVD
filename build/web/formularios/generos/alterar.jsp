@@ -13,6 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Alterar</title>
+        <link rel="stylesheet" href="${cp}/css/style.css"/>
     </head>
     <body>
 
@@ -34,17 +35,17 @@
                    value="${requestScope.generos.genero}"/>
           </td>
         </tr>
-        <tr>
-          <td>
-            <a href="${cp}/formularios/generos/listagem.jsp">
-              Voltar
-            </a>
-          </td>
-          <td class="alinharDireita">
-            <input type="submit" value="Alterar"/>
-          </td>
-        </tr>
+        
       </table>
+      <div class = "frame">
+                <button class = "custom-btn btn-4">
+                    <a href="${cp}/formularios/generos/listagem.jsp" >
+                        Voltar
+                    </a>
+                </button>
+                <input type="submit" value="Alterar"/>
+            </div>    
+          
 
     </form>
 

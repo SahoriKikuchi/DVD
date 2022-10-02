@@ -44,18 +44,21 @@ public class DvdServlets extends HttpServlet {
                 int atorCoadjuvante = Integer.parseInt(request.getParameter("atorCoadjuvante"));
                 Date dataDeLancamento = Date.valueOf(request.getParameter( "dataDeLancamento" ));
                 int duracao = Integer.parseInt(request.getParameter( "duracao" ) );
-                String genero = request.getParameter("genero");
-                String classificacao = request.getParameter("descricao");
+                int genero = Integer.parseInt(request.getParameter("genero"));
+                int classificacao = Integer.parseInt(request.getParameter("classificacao"));
 
 
 
                 Genero g = new Genero();
-                g.setGenero(genero);
+                g.setId(genero);
                 
                 Classificacao c = new Classificacao();
-                c.setDescricao(classificacao);
-//                Atores a = new Atores();
-//                a.set
+                c.setId(classificacao);
+                
+//                Atores aP = new Atores();
+//                aP.set(atorPrincipal);
+//                  Atores aC = new Atores();
+//                aC.set(atorCCoadjuvante);
                 
                 Dvd d = new Dvd();
                 d.setTitulo(titulo);
@@ -66,7 +69,6 @@ public class DvdServlets extends HttpServlet {
                 d.setDuracao(duracao);
                 d.setGenero(g);
                 d.setClassificacao(c);
-
                 dao.salvar(d);
 
                 disp = request.getRequestDispatcher(
@@ -75,21 +77,21 @@ public class DvdServlets extends HttpServlet {
             } else if (acao.equals("alterar")) {
                 int id = Integer.parseInt(request.getParameter("id"));
                 String titulo = request.getParameter("titulo");
-                Year anoDeLancamento = Year.parse(request.getParameter( "anoDeLançamento" ) );
+                Year anoDeLancamento = Year.parse(request.getParameter( "anoDeLancamento" ) );
                 int atorPrincipal = Integer.parseInt(request.getParameter("atorPrincipal"));
                 int atorCoadjuvante = Integer.parseInt(request.getParameter("atorCoadjuvante"));
                 Date dataDeLancamento = Date.valueOf(request.getParameter( "dataDeLancamento" ));
                 int duracao = Integer.parseInt(request.getParameter( "duracao" ) );
-                String genero = request.getParameter("genero");
-                String classificacao = request.getParameter("descricao");
+                int genero = Integer.parseInt(request.getParameter("genero"));
+                int classificacao = Integer.parseInt(request.getParameter("classificacao"));
 
 
 
                 Genero g = new Genero();
-                g.setGenero(genero);
+                g.setId(genero);
                 
                 Classificacao c = new Classificacao();
-                c.setDescricao(classificacao);
+                c.setId(classificacao);
                 
                 Dvd d = new Dvd();
                 d.setId(id);

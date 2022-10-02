@@ -8,6 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&display=swap');
 
 body {
     background: #FFF8F0;
@@ -24,65 +25,65 @@ h1 {
 /*Index*/
 
 .cards-list {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .card {
-  margin: 30px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  cursor: pointer;
-  transition: 0.4s;
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .card .card_img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
 }
 
 .card .card_img img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-  object-fit: cover;
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
 }
 
 .card .card_title {
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
 }
 
 .card:hover {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+        -5px -5px 30px 15px rgba(0,0,0,0.22);
 }
 
 .title-white {
-  color: white;
+    color: white;
 }
 
 .title-black {
-  color: black;
+    color: black;
 }
 
 @media all and (max-width: 500px) {
-  .card-list {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
+    .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
 }
 
 
@@ -91,11 +92,12 @@ h1 {
 table {
     border-collapse: collapse;
     width: 100%;
+    text-align: center;
 }
 
 th, td {
     padding: 8px;
-
+    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
@@ -125,7 +127,7 @@ button a {
     height: 40px;
     padding: 10px 25px;
     border: 2px solid #000;
-    font-family: 'Lato', sans-serif;
+    font-family: "Cormorant Garamond", serif;
     font-weight: 500;
     background: transparent;
     cursor: pointer;
@@ -143,8 +145,8 @@ button a {
 }
 .btn-4:hover{
     border: none;
-    text-shadow: -.25px -.25px 0 black, 
-                .25px .25px black;
+    text-shadow: -.25px -.25px 0 black,
+        .25px .25px black;
 }
 .btn-4:before,
 .btn-4:after {
@@ -204,6 +206,43 @@ a:active {
     text-align: center;
 }
 
+
+
+input[type=submit] {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=text], input[type=Date] {
+  font-family: 'Nunito', sans-serif;
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+    
+}
+
 .alinharDireita{
-    text-align: right;
+    text-align: right!important;
+    width: 50%;
+    
+}
+.alinharEsquerda{
+    text-align: left!important;
+    /*padding-left: 40px;*/
+    width: 50%;
+}
+
+.alinharCentro{
+    text-align: center!important;
 }

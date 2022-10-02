@@ -17,7 +17,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
-          href="${cp}/css/estilos.css"/>
+          href="${cp}/css/style.css"/>
     
     
   </head>
@@ -41,18 +41,17 @@
                    required/>
           </td>
         </tr>
-        <tr>
-            
-          <td>
-            <a href="${cp}/formularios/generos/listagem.jsp">
-              Voltar
-            </a>
-          </td>
-          <td class="alinharDireita">
-            <input type="submit" value="Salvar"/>
-          </td>
-        </tr>
+      
       </table>
+      
+      <div class = "frame">
+            <button class = "custom-btn btn-4">
+                <a href="${cp}/formularios/generos/listagem.jsp" >
+                    Voltar
+                </a>
+            </button>
+            <input type="submit" value="Salvar"/>
+        </div>
 
     </form>
 

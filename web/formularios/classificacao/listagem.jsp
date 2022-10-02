@@ -42,7 +42,7 @@
                     <tr>
 
                         <td>${classificacoes.descricao}</td>
-                        
+
                         <td>
                             <a href="${cp}/${prefixo}Alteracao&id=${classificacoes.id}">
                                 <i class="material-icons">edit_square</i>
@@ -57,15 +57,15 @@
                 </c:forEach>
             </tbody>
         </table>
-<br>
+        <br>
         <div class = "frame">
-        <button class = "custom-btn btn-4">
-            <a href="${cp}/formularios/classificacao/novo.jsp" >
-                Nova classificação
-            </a>
-        </button>
-        <button class = "custom-btn btn-4">
-            <a href="${cp}/index.jsp">Tela Inicial</a>
-        </button>
+            <button class = "custom-btn btn-4">
+                <a href="${cp}/formularios/classificacao/novo.jsp" >
+                    Nova classificação
+                </a>
+            </button>
+            <button class = "custom-btn btn-4">
+                <a href="${cp}/index.jsp">Tela Inicial</a>
+            </button>
     </body>
 </html>
