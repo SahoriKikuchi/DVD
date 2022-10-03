@@ -13,7 +13,7 @@
         <title>Novo DVD</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="${cp}/css/estilos.css"/>
+        <link rel="stylesheet" href="${cp}/css/style.css"/>
     </head>
 
     <body>
@@ -66,7 +66,7 @@
                 <tr>
                     <td class="alinharDireita">Ator Coadjuvante:</td>
                     <td>
-                       <jsp:useBean
+                        <jsp:useBean
                             id="servicosAC"
                             scope="page"
                             class="locacaodvds.servicos.AtoresServices"/>
@@ -133,19 +133,18 @@
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <a href="${cp}/formularios/dvd/listagem.jsp">
-                            Voltar
-                        </a>
-                    </td>
-                    <td class="alinharDireita">
-                        <input type="submit" value="Salvar"/>
-                    </td>
-                </tr>
             </table>
 
-        </form>
+            <br/>
+            <input type="submit" value="Salvar"/>
+            <div class="frame">
+                <button class="custom-btn btn-4">
+                    <a href="${cp}/formularios/dvd/listagem.jsp">
+                        Voltar
+                    </a>
+                </button>
+            </div>
+    </form>
 
-    </body>
+</body>
 </html>

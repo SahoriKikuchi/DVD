@@ -24,13 +24,6 @@
     <body>
 
         <h1>Dvds Cadastrados</h1>
-
-        <p>
-            <a href="${cp}/formularios/dvd/novo.jsp">
-                Novo DVD
-            </a>
-        </p>
-
         <table>
             <thead>
                 <tr>
@@ -42,8 +35,8 @@
                     <th>Duracao</th>
                     <th>Gênero</th>
                     <th>Classificação</th>
-                    <th>Alterar</th>
-                    <th>Excluir</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -75,9 +68,17 @@
                 </c:forEach>
             </tbody>
         </table>
-
-
-        <p><a href="${cp}/index.jsp">Tela Principal</a></p>
+        <br>
+        <div class = "frame">
+            <button class = "custom-btn btn-4">
+                <a href="${cp}/formularios/dvd/novo.jsp" >
+                    Novo DVD
+                </a>
+            </button>
+            <button class = "custom-btn btn-4">
+                <a href="${cp}/index.jsp">Tela Inicial</a>
+            </button>
+        </div>
 
     </body>
 

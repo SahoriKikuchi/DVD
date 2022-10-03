@@ -43,18 +43,15 @@
 
                 <tr>
             </table>
-            
+            <br/>
+            <input type="submit" value="Salvar"/>
             <div class="frame">
-                <button class="custom-btn">
+                <button class="custom-btn btn-4">
                     <a href="${cp}/formularios/classificacao/listagem.jsp">
                         Voltar
                     </a>
                 </button>
-                <input type="submit" value="Excluir"/>
             </div>
-
         </form>
-
     </body>
-
 </html>

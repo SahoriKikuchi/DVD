@@ -9,9 +9,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&display=swap');
+ 
 
 body {
-    background: #FFF8F0;
+    background: #93ccc6;
 }
 
 h1 {
@@ -49,10 +50,16 @@ h1 {
 }
 
 .card .card_img img {
-    width: inherit;
-    height: inherit;
+    width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
+    max-height: inherit;
+    height: 300px;
     border-radius: 40px;
     object-fit: cover;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
 }
 
 .card .card_title {
@@ -102,7 +109,7 @@ th, td {
 }
 
 tr:hover {
-    background-color: #FF8811;
+    background-color: #e3dfba;
 }
 
 i{
@@ -201,6 +208,7 @@ a:active {
 }
 
 .frame {
+    /*display: inline-block;*/
     width: 90%;
     margin: 40px auto;
     text-align: center;
@@ -209,7 +217,7 @@ a:active {
 
 
 input[type=submit] {
-    background-color: red;
+    background-color: #1a1f1e;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -219,21 +227,22 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #65a675;
 }
 
-input[type=text], input[type=Date] {
+input[type=text], input[type=Date], select, input[type=Number] {
   font-family: 'Nunito', sans-serif;
   width: 80%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
-    
+  text-align: left;
 }
 
+
 .alinharDireita{
-    text-align: right!important;
+
     width: 50%;
     
 }

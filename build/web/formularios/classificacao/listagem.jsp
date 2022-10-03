@@ -27,8 +27,8 @@
             <thead>
                 <tr>
                     <th>Descrição</th>
-                    <th>Alterar</th>
-                    <th>Excluir</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -67,5 +67,6 @@
             <button class = "custom-btn btn-4">
                 <a href="${cp}/index.jsp">Tela Inicial</a>
             </button>
+        </div>
     </body>
 </html>

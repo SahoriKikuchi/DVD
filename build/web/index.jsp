@@ -26,7 +26,9 @@
         <div class = "cards-list">
             <div class ="card">
                 <div class ="card_img">
-                    <img src="${cp}/img/img-dvd.jpg">
+                    <a href="${cp}/formularios/dvd/listagem.jsp">
+                        <img src="${cp}/img/img-dvd.jpg">
+                    </a>
                 </div>
                 <div class="card_title title-white">
                     <p>
@@ -36,7 +38,9 @@
             </div>
             <div class ="card">
                 <div class ="card_img">
-                    <img src="${cp}/img/img-atores.jpg">
+                    <a href="${cp}/formularios/atores/listagem.jsp">
+                        <img src="${cp}/img/atorees.jpg">
+                    </a>
                 </div>
                 <div class="card_title title-white">
                     <p>
@@ -46,7 +50,9 @@
             </div>
             <div class ="card">
                 <div class ="card_img">
-                    <img src="${cp}/img/img-classificacao.jpg">
+                    <a href="${cp}/formularios/classificacao/listagem.jsp">
+                        <img src="${cp}/img/classificacaoEtaria.jpg">
+                    </a>
                 </div>
                 <div class="card_title title-white">
                     <p>
@@ -56,7 +62,9 @@
             </div>
             <div class ="card">
                 <div class ="card_img">
-                    <img src="${cp}/img/img-generos.jpg">
+                    <a href="${cp}/formularios/generos/listagem.jsp">
+                        <img src="${cp}/img/img-generos.jpg">
+                    </a>
                 </div>
                 <div class="card_title title-white">
                     <p>
@@ -65,7 +73,7 @@
                 </div>
             </div>
         </div>
-                    
+
     </body>
-    
+
 </html>
