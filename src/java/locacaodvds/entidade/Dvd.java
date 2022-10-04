@@ -10,7 +10,7 @@ import java.time.Year;
 public class Dvd {
     
     private Classificacao classificacao;
-    private Genero genero;
+    private Genero generoDvd;
     private int id;
     private String titulo;
     private Year anoDeLancamento;
@@ -38,11 +38,11 @@ public class Dvd {
     }
 
     public Genero getGenero() {
-        return genero;
+        return generoDvd;
     }
 
     public void setGenero(Genero genero) {
-        this.genero = genero;
+        this.generoDvd = genero;
     }
 
     public int getId() {

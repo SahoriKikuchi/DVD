@@ -142,25 +142,25 @@ public class DvdDAO extends DAO<Dvd> {
             d.setAnoDeLancamento(Year.parse(rs.getString("anoDeLancamentoDvd")));
             d.setDataDeLancamento(rs.getDate("dataDeLancamentoDvd"));
             d.setDuracao(rs.getInt("duracaoDvd"));
+
             d.setAtorPrincipal(a);
-            
             a.setId(rs.getInt("idAtorPrincipal"));
             a.setNome(rs.getString("nomeAtorPrincipal"));
             a.setSobrenome(rs.getString("sobrenomeAtorPrincipal"));
-            
+
             d.setAtorCoadjuvante(ac);
             ac.setId(rs.getInt("idAtorCoadjuvante"));
             ac.setNome(rs.getString("nomeAtorCoadjuvante"));
             ac.setSobrenome(rs.getString("sobrenomeAtorCoadjuvante"));
-            
+
             d.setGenero(g);
             g.setId(rs.getInt("idGenero"));
             g.setGenero(rs.getString("generoGenero"));
-            
+
             d.setClassificacao(c);
             c.setId(rs.getInt("idClassificacao"));
             c.setDescricao(rs.getString("descricaoClassificacao"));
-            
+
             lista.add(d);
 
         }
@@ -173,7 +173,54 @@ public class DvdDAO extends DAO<Dvd> {
 
     @Override
     public Dvd obterPorId(int id) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Dvd dvd = null;
+        PreparedStatement stmt = getConnection().prepareStatement(
+                "SELECT * FROM dvd "
+                + "WHERE id = ? "
+                + "ORDER BY dvd.titulo, dvd.dataDeLancamento, dvd.duracao;");
+
+        stmt.setInt(1, id);
+        ResultSet rs = stmt.executeQuery();
+
+        while (rs.next()) {
+
+            dvd = new Dvd();
+            Atores a = new Atores();
+            Atores ac = new Atores();
+            Classificacao c = new Classificacao();
+            Genero g = new Genero();
+
+            dvd.setId(rs.getInt("id"));
+            dvd.setTitulo(rs.getString("titulo"));
+            dvd.setAnoDeLancamento(Year.parse(rs.getString("anoDeLancamento")));
+            dvd.setDataDeLancamento(rs.getDate("dataDeLancamento"));
+            dvd.setDuracao(rs.getInt("duracao"));
+
+            dvd.setAtorPrincipal(a);
+            a.setId(rs.getInt("atorprincipal_id"));
+//            a.setNome(rs.getString("nomeAtorPrincipal"));
+//            a.setSobrenome(rs.getString("sobrenomeAtorPrincipal"));
+
+            dvd.setAtorCoadjuvante(ac);
+            ac.setId(rs.getInt("atorCoadjuvante_id"));
+//            ac.setNome(rs.getString("nomeAtorCoadjuvante"));
+//            ac.setSobrenome(rs.getString("sobrenomeAtorCoadjuvante"));
+
+            dvd.setGenero(g);
+            g.setId(rs.getInt("genero_id"));
+//            g.setGenero(rs.getString("generoGenero"));
+
+            dvd.setClassificacao(c);
+            c.setId(rs.getInt("classificacao_id"));
+//            c.setDescricao(rs.getString("descricaoClassificacao"));
+
+        }
+
+        rs.close();
+        stmt.close();
+        
+        return dvd;
+
     }
 
 }
