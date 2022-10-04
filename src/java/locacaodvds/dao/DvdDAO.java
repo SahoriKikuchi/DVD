@@ -39,8 +39,8 @@ public class DvdDAO extends DAO<Dvd> {
 
         stmt.setString(1, obj.getTitulo());
         stmt.setInt(2, (obj.getAnoDeLancamento().getValue()));
-        stmt.setInt(3, obj.getAtorPrincipal());
-        stmt.setInt(4, obj.getAtorCoadjuvante());
+        stmt.setInt(3, obj.getAtorPrincipal().getId());
+        stmt.setInt(4, obj.getAtorCoadjuvante().getId());
         stmt.setInt(5, obj.getGenero().getId());
         stmt.setInt(6, obj.getClassificacao().getId());
         stmt.setDate(7, obj.getDataDeLancamento());
@@ -68,8 +68,8 @@ public class DvdDAO extends DAO<Dvd> {
 
         stmt.setString(1, obj.getTitulo());
         stmt.setInt(2, (obj.getAnoDeLancamento().getValue()));
-        stmt.setInt(3, obj.getAtorPrincipal());
-        stmt.setInt(4, obj.getAtorCoadjuvante());
+        stmt.setInt(3, obj.getAtorPrincipal().getId());
+        stmt.setInt(4, obj.getAtorCoadjuvante().getId());
         stmt.setInt(5, obj.getGenero().getId());
         stmt.setInt(6, obj.getClassificacao().getId());
         stmt.setDate(7, obj.getDataDeLancamento());
@@ -101,16 +101,31 @@ public class DvdDAO extends DAO<Dvd> {
                 "SELECT"
                 + "    d.id idDvd, "
                 + "    d.titulo tituloDvd, "
-                + "    a.id idAtores, "
-                + "    a.nome nomeAtores, "
-                + "    a.sobrenome sobrenomeAtores "
+                + "    d.anoDeLancamento anoDeLancamentoDvd, "
+                + "    d.dataDeLancamento dataDeLancamentoDvd, "
+                + "    d.duracao duracaoDvd, "
+                + "    g.id idGenero, "
+                + "    g.genero generoGenero, "
+                + "    c.id idClassificacao, "
+                + "    c.descricao descricaoClassificacao, "
+                + "    a.id idAtorPrincipal, "
+                + "    a.nome nomeAtorPrincipal, "
+                + "    a.sobrenome sobrenomeAtorPrincipal, "
+                + "    ac.id idAtorCoadjuvante, "
+                + "    ac.nome nomeAtorCoadjuvante, "
+                + "    ac.sobrenome sobrenomeAtorCoadjuvante "
                 + "FROM"
                 + "    dvd d, "
                 + "    classificacao c, "
                 + "    atores a, "
+                + "    atores ac, "
                 + "    genero g "
                 + "WHERE"
-                + "    d.atorPrincipal_id = a.id ;");
+                + "    d.atorPrincipal_id = a.id AND"
+                + "    d.atorCoadjuvante_id = ac.id AND"
+                + "    d.genero_id = g.id AND"
+                + "    d.classificacao_id = c.id "
+                + "ORDER BY d.titulo, d.dataDeLancamento, d.duracao;");
 
         ResultSet rs = stmt.executeQuery();
 
@@ -118,25 +133,34 @@ public class DvdDAO extends DAO<Dvd> {
 
             Dvd d = new Dvd();
             Atores a = new Atores();
+            Atores ac = new Atores();
             Classificacao c = new Classificacao();
             Genero g = new Genero();
 
             d.setId(rs.getInt("idDvd"));
             d.setTitulo(rs.getString("tituloDvd"));
-//            d.setAnoDeLancamento(Year.parse(rs.getString("anoDeLancamento")));
-//            d.setDuracao(rs.getInt("duracao"));
-
-            a.setId(rs.getInt("idAtores"));
-            a.setNome(rs.getString("nomeAtores"));
-            a.setSobrenome(rs.getString("sobrenomeAtores"));
-//            a.setDataDeEstreia(rs.getDate("dataDeEstreia"));
-
-//            c.setId(rs.getInt("idClassificacao"));
-//            c.setDescricao(rs.getString("descricao"));
-
-//            g.setId(rs.getInt("idGenero"));
-//            g.setGenero(rs.getString("genero"));
-
+            d.setAnoDeLancamento(Year.parse(rs.getString("anoDeLancamentoDvd")));
+            d.setDataDeLancamento(rs.getDate("dataDeLancamentoDvd"));
+            d.setDuracao(rs.getInt("duracaoDvd"));
+            d.setAtorPrincipal(a);
+            
+            a.setId(rs.getInt("idAtorPrincipal"));
+            a.setNome(rs.getString("nomeAtorPrincipal"));
+            a.setSobrenome(rs.getString("sobrenomeAtorPrincipal"));
+            
+            d.setAtorCoadjuvante(ac);
+            ac.setId(rs.getInt("idAtorCoadjuvante"));
+            ac.setNome(rs.getString("nomeAtorCoadjuvante"));
+            ac.setSobrenome(rs.getString("sobrenomeAtorCoadjuvante"));
+            
+            d.setGenero(g);
+            g.setId(rs.getInt("idGenero"));
+            g.setGenero(rs.getString("generoGenero"));
+            
+            d.setClassificacao(c);
+            c.setId(rs.getInt("idClassificacao"));
+            c.setDescricao(rs.getString("descricaoClassificacao"));
+            
             lista.add(d);
 
         }

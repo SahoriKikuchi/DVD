@@ -47,7 +47,10 @@ public class DvdServlets extends HttpServlet {
                 int genero = Integer.parseInt(request.getParameter("genero"));
                 int classificacao = Integer.parseInt(request.getParameter("classificacao"));
 
-
+                Atores a = new Atores();
+                Atores b = new Atores();
+                a.setId(atorPrincipal);
+                b.setId(atorCoadjuvante);
 
                 Genero g = new Genero();
                 g.setId(genero);
@@ -55,22 +58,16 @@ public class DvdServlets extends HttpServlet {
                 Classificacao c = new Classificacao();
                 c.setId(classificacao);
                 
-//                Atores aP = new Atores();
-//                aP.set(atorPrincipal);
-//                  Atores aC = new Atores();
-//                aC.set(atorCCoadjuvante);
-                
                 Dvd d = new Dvd();
                 d.setTitulo(titulo);
                 d.setAnoDeLancamento(anoDeLancamento);
-                d.setAtorPrincipal(atorPrincipal);
-                d.setAtorCoadjuvante(atorCoadjuvante);
+                d.setAtorPrincipal(a);
+                d.setAtorCoadjuvante(b);
                 d.setDataDeLancamento(dataDeLancamento);
                 d.setDuracao(duracao);
                 d.setGenero(g);
                 d.setClassificacao(c);
                 dao.salvar(d);
-
                 disp = request.getRequestDispatcher(
                         "/formularios/dvd/listagem.jsp");
 
@@ -85,6 +82,10 @@ public class DvdServlets extends HttpServlet {
                 int genero = Integer.parseInt(request.getParameter("genero"));
                 int classificacao = Integer.parseInt(request.getParameter("classificacao"));
 
+                Atores a = new Atores();
+                Atores b = new Atores();
+                a.setId(atorPrincipal);
+                b.setId(atorCoadjuvante);
 
 
                 Genero g = new Genero();
@@ -97,8 +98,8 @@ public class DvdServlets extends HttpServlet {
                 d.setId(id);
                 d.setTitulo(titulo);
                 d.setAnoDeLancamento(anoDeLancamento);
-                d.setAtorPrincipal(atorPrincipal);
-                d.setAtorCoadjuvante(atorCoadjuvante);
+                d.setAtorPrincipal(a);
+                d.setAtorCoadjuvante(b);
                 d.setDataDeLancamento(dataDeLancamento);
                 d.setDuracao(duracao);
                 d.setGenero(g);

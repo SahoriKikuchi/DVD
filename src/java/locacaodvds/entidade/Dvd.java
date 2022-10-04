@@ -9,14 +9,13 @@ import java.time.Year;
  */
 public class Dvd {
     
-    private Atores atores;
     private Classificacao classificacao;
     private Genero genero;
     private int id;
     private String titulo;
     private Year anoDeLancamento;
-    private int atorPrincipal;
-    private int atorCoadjuvante;
+    private Atores atorPrincipal;
+    private Atores atorCoadjuvante;
     private Date dataDeLancamento;
     private int duracao;
 
@@ -28,14 +27,6 @@ public class Dvd {
     
     public void setDataDeLancamento(Date dataDeLancamento) {
         this.dataDeLancamento = dataDeLancamento;
-    }
-
-    public Atores getAtores() {
-        return atores;
-    }
-
-    public void setAtores(Atores atores) {
-        this.atores = atores;
     }
 
     public Classificacao getClassificacao() {
@@ -78,19 +69,19 @@ public class Dvd {
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public int getAtorPrincipal() {
+    public Atores getAtorPrincipal() {
         return atorPrincipal;
     }
 
-    public void setAtorPrincipal(int atorPrincipal) {
+    public void setAtorPrincipal(Atores atorPrincipal) {
         this.atorPrincipal = atorPrincipal;
     }
 
-    public int getAtorCoadjuvante() {
+    public Atores getAtorCoadjuvante() {
         return atorCoadjuvante;
     }
 
-    public void setAtorCoadjuvante(int atorCoadjuvante) {
+    public void setAtorCoadjuvante(Atores atorCoadjuvante) {
         this.atorCoadjuvante = atorCoadjuvante;
     }
 
@@ -102,6 +93,10 @@ public class Dvd {
     public void setDuracao(int duracao) {
         this.duracao = duracao;
     }
+//    @Override
+//    public String toString(){
+//        return "Dvd{" + "id =" + id + ",titulo =" + titulo + ",anoLancamento=" + anoDeLancamento + ",dataLancamento=" + dataDeLancamento + ", duracao=" + duracao + ", genero = " + genero + ", classificacao= " + classificacao +", atorPrincipal"+ atorPrincipal +", atroCoadjuvante =" + atorCoadjuvante + "}";
+//    }
 
 
 

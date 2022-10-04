@@ -48,11 +48,14 @@
 
                 <c:forEach items="${servicos.todos}" var="dvd">
                     <tr>
-                        <td>${dvd.id}</td>
                         <td>${dvd.titulo}</td>
                         <td>${dvd.anoDeLancamento}</td>
-                        <td>${dvd.atores.nome}</td>
+                        <td>${dvd.atorPrincipal.nome} ${dvd.atorPrincipal.sobrenome}</td>
+                        <td>${dvd.atorCoadjuvante.nome} ${dvd.atorCoadjuvante.sobrenome}</td>
+                        <td>${dvd.dataDeLancamento}</td>
                         <td>${dvd.duracao}</td>
+                        <td>${dvd.genero}</td>
+                        <td>${dvd.classificacao}</td>
 
                         <td>
                             <a href="${cp}/${prefixo}Alteracao&id=${dvd.id}">
