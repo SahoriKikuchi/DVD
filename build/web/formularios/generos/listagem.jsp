@@ -21,7 +21,7 @@
         <link rel = "icon"  type = "image/gif" href="${cp}/img/background.gif"/>
     </head>
     <body>
-        <h1>Gêneros Cadastrados</h1>
+        <h1>Generos Cadastrados</h1>
 
 
         <table>
