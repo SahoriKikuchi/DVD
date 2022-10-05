@@ -175,9 +175,34 @@ public class DvdDAO extends DAO<Dvd> {
     public Dvd obterPorId(int id) throws SQLException {
         Dvd dvd = null;
         PreparedStatement stmt = getConnection().prepareStatement(
-                "SELECT * FROM dvd "
-                + "WHERE id = ? "
-                + "ORDER BY dvd.titulo, dvd.dataDeLancamento, dvd.duracao;");
+                "SELECT"
+                + "    dvd.id idDvd, "
+                + "    dvd.titulo tituloDvd, "
+                + "    dvd.anoDeLancamento anoDeLancamentoDvd, "
+                + "    dvd.dataDeLancamento dataDeLancamentoDvd, "
+                + "    dvd.duracao duracaoDvd, "
+                + "    g.id idGenero, "
+                + "    g.genero generoGenero, "
+                + "    c.id idClassificacao, "
+                + "    c.descricao descricaoClassificacao, "
+                + "    a.id idAtorPrincipal, "
+                + "    a.nome nomeAtorPrincipal, "
+                + "    a.sobrenome sobrenomeAtorPrincipal, "
+                + "    ac.id idAtorCoadjuvante, "
+                + "    ac.nome nomeAtorCoadjuvante, "
+                + "    ac.sobrenome sobrenomeAtorCoadjuvante "
+                + "FROM"
+                + "    dvd dvd, "
+                + "    classificacao c, "
+                + "    atores a, "
+                + "    atores ac, "
+                + "    genero g "
+                + "WHERE"
+                + "    dvd.atorPrincipal_id = a.id AND"
+                + "    dvd.atorCoadjuvante_id = ac.id AND"
+                + "    dvd.genero_id = g.id AND"
+                + "    dvd.classificacao_id = c.id AND"
+                + "    dvd.id = ?;");
 
         stmt.setInt(1, id);
         ResultSet rs = stmt.executeQuery();
@@ -190,35 +215,35 @@ public class DvdDAO extends DAO<Dvd> {
             Classificacao c = new Classificacao();
             Genero g = new Genero();
 
-            dvd.setId(rs.getInt("id"));
-            dvd.setTitulo(rs.getString("titulo"));
-            dvd.setAnoDeLancamento(Year.parse(rs.getString("anoDeLancamento")));
-            dvd.setDataDeLancamento(rs.getDate("dataDeLancamento"));
-            dvd.setDuracao(rs.getInt("duracao"));
+            dvd.setId(rs.getInt("idDvd"));
+            dvd.setTitulo(rs.getString("tituloDvd"));
+            dvd.setAnoDeLancamento(Year.parse(rs.getString("anoDeLancamentoDvd")));
+            dvd.setDataDeLancamento(rs.getDate("dataDeLancamentoDvd"));
+            dvd.setDuracao(rs.getInt("duracaoDvd"));
 
             dvd.setAtorPrincipal(a);
-            a.setId(rs.getInt("atorprincipal_id"));
-//            a.setNome(rs.getString("nomeAtorPrincipal"));
-//            a.setSobrenome(rs.getString("sobrenomeAtorPrincipal"));
+            a.setId(rs.getInt("idAtorPrincipal"));
+            a.setNome(rs.getString("nomeAtorPrincipal"));
+            a.setSobrenome(rs.getString("sobrenomeAtorPrincipal"));
 
             dvd.setAtorCoadjuvante(ac);
-            ac.setId(rs.getInt("atorCoadjuvante_id"));
-//            ac.setNome(rs.getString("nomeAtorCoadjuvante"));
-//            ac.setSobrenome(rs.getString("sobrenomeAtorCoadjuvante"));
+            ac.setId(rs.getInt("idAtorCoadjuvante"));
+            ac.setNome(rs.getString("nomeAtorCoadjuvante"));
+            ac.setSobrenome(rs.getString("sobrenomeAtorCoadjuvante"));
 
             dvd.setGenero(g);
-            g.setId(rs.getInt("genero_id"));
-//            g.setGenero(rs.getString("generoGenero"));
+            g.setId(rs.getInt("idGenero"));
+            g.setGenero(rs.getString("generoGenero"));
 
             dvd.setClassificacao(c);
-            c.setId(rs.getInt("classificacao_id"));
-//            c.setDescricao(rs.getString("descricaoClassificacao"));
+            c.setId(rs.getInt("idClassificacao"));
+            c.setDescricao(rs.getString("descricaoClassificacao"));
 
         }
 
         rs.close();
         stmt.close();
-        
+
         return dvd;
 
     }

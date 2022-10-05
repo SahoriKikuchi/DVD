@@ -12,8 +12,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Novo Genero</title>
-        <meta charset="UTF-8">
+        <title>Novo Gênero</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"
@@ -24,15 +25,15 @@
 
     <body>
 
-        <h1>Novo Genero</h1>
+        <h1>Novo Gênero</h1>
 
-        <form method="post" action="${cp}/processaGenero">
+        <form method="post" action="${cp}/processaGenero" accept-charset="UTF-8">
 
             <input name="acao" type="hidden" value="inserir"/>
 
             <table>
                 <tr>
-                    <td class="alinharDireita">Genero:</td>
+                    <td class="alinharDireita">Gênero:</td>
                     <td>
                         <input name="genero"
                                type="text"

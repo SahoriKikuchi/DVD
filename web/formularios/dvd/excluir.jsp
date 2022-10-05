@@ -4,11 +4,11 @@
     Author     : lpcor
 --%>
 
+<!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="cp" value="${pageContext.request.contextPath}"/>
 <c:set var="prefixo" value="processaDvds?acao=preparar"/>
-<!DOCTYPE html>
 <html>
     <head>
         <title>Excluir Atores</title>
@@ -37,11 +37,11 @@
                 </tr>
                 <tr>
                     <td class="alinharDireita">Ator Principal: </td>
-                    <td class="alinharEsquerda">${requestScope.dvd.atorPrincipal}</td>
+                    <td class="alinharEsquerda">${requestScope.dvd.atorPrincipal.nome} ${requestScope.dvd.atorPrincipal.sobrenome}</td>
                 </tr>
                 <tr>
                     <td class="alinharDireita">Ator Coadjuvante: </td>
-                    <td class="alinharEsquerda">${requestScope.dvd.atorCoadjuvante} ${requestScope.dvd.atorCoadjuvante.nome}</td>
+                    <td class="alinharEsquerda">${requestScope.dvd.atorCoadjuvante.nome} ${requestScope.dvd.atorCoadjuvante.sobrenome}</td>
                 </tr>
                 <tr>
                     <td class="alinharDireita">Data de Lançamento: </td>
