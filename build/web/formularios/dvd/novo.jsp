@@ -138,13 +138,13 @@
             <br/>
             <input type="submit" value="Salvar"/>
             <div class="frame">
-                <button class="custom-btn btn-4">
-                    <a href="${cp}/formularios/dvd/listagem.jsp">
+                <a href="${cp}/formularios/dvd/listagem.jsp">
+                    <button type ="button"class="custom-btn btn-4">
                         Voltar
-                    </a>
-                </button>
+                    </button>
+                </a>
             </div>
-    </form>
+        </form>
 
-</body>
+    </body>
 </html>

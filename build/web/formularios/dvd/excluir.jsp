@@ -63,11 +63,11 @@
             </table>
 
             <div class="frame">
-                <button class="custom-btn btn-4">
                     <a href="${cp}/formularios/dvd/listagem.jsp">
+                <button type="button" class="custom-btn btn-4">
                         Voltar
-                    </a>
                 </button>
+                    </a>
                 <input type="submit" value="Excluir"/>
             </div>
         </form>

@@ -17,52 +17,52 @@
     </head>
     <body>
 
-    <h1>Alterar Atores</h1>
+        <h1>Alterar Atores</h1>
 
-    <form method="post" action="${cp}/processaAtores">
+        <form method="post" action="${cp}/processaAtores">
 
-      <input name="acao" type="hidden" value="alterar"/>
-      <input name="id" type="hidden" value="${requestScope.atores.id}"/>
+            <input name="acao" type="hidden" value="alterar"/>
+            <input name="id" type="hidden" value="${requestScope.atores.id}"/>
 
-      <table>
-        <tr>
-          <td class="alinharDireita">Nome:</td>
-          <td>
-            <input name="nome"
-                   type="text"
-                   size="20"
-                   maxlength="45"
-                   value="${requestScope.atores.nome}"/>
-          </td>
-        </tr>
-        <tr>
-          <td class="alinharDireita">Sobrenome: </td>
-          <td>
-            <input name="sobrenome"
-                   type="text"
-                   size="3"
-                   maxlength="45"
-                   value="${requestScope.atores.sobrenome}"/>
-          </td>
-        </tr>
-        <tr>
-          <td class="alinharDireita">Data de estreia: </td>
-          <td>
-            <input name="dataDeEstreia"
-                   type="date"
-                   value="${requestScope.atores.dataDeEstreia}"/>
-          </td>
-        </tr>
-         </table>
-         <div class="frame"> 
-          <button class = "custom-btn">
-            <a href="${cp}/formularios/atores/listagem.jsp">
-              Voltar
-            </a>
-         </button>
-         <input type="submit" value="Alterar"/>
-         </div>
-    </form>
+            <table>
+                <tr>
+                    <td class="alinharDireita">Nome:</td>
+                    <td>
+                        <input name="nome"
+                               type="text"
+                               size="20"
+                               maxlength="45"
+                               value="${requestScope.atores.nome}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alinharDireita">Sobrenome: </td>
+                    <td>
+                        <input name="sobrenome"
+                               type="text"
+                               size="3"
+                               maxlength="45"
+                               value="${requestScope.atores.sobrenome}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alinharDireita">Data de estreia: </td>
+                    <td>
+                        <input name="dataDeEstreia"
+                               type="date"
+                               value="${requestScope.atores.dataDeEstreia}"/>
+                    </td>
+                </tr>
+            </table>
+            <div class="frame"> 
+                <a href="${cp}/formularios/atores/listagem.jsp">
+                    <button class="custom-btn btn-4">
+                        Voltar
+                    </button>
+                </a>
+                <input type="submit" value="Alterar"/>
+            </div>
+        </form>
 
-  </body>
+    </body>
 </html>

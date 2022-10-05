@@ -34,12 +34,12 @@
             </thead>
             <tbody>
 
-<jsp:useBean
-    id="servicos"
-    scope="page"
-    class="locacaodvds.servicos.AtoresServices"/>
+                <jsp:useBean
+                    id="servicos"
+                    scope="page"
+                    class="locacaodvds.servicos.AtoresServices"/>
 
-<c:forEach items="${servicos.todos}" var="atores">
+                <c:forEach items="${servicos.todos}" var="atores">
                     <tr>
 
                         <td>${atores.nome}</td>
@@ -57,19 +57,21 @@
                             </a>
                         </td>
                     </tr>
-</c:forEach>
+                </c:forEach>
             </tbody>
         </table>
         <br>
         <div class = "frame">
-            <button class = "custom-btn btn-4">
-                <a href="${cp}/formularios/atores/novo.jsp" >
-                    Novo Ator
-                </a>
-            </button>
-            <button class = "custom-btn btn-4">
-                <a href="${cp}/index.jsp">Tela Inicial</a>
-            </button>
+            <a href="${cp}/formularios/atores/novo.jsp">
+                <button type= "button" class="custom-btn btn-4">
+                    Novo ator
+                </button>
+            </a>
+            <a href="${cp}/index.jsp">
+                <button type="button" class = "custom-btn btn-4">
+                    Tela Inicial
+                </button>
+            </a>
         </div>
     </body>
 </html>

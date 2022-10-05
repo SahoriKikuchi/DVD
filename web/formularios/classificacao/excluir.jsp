@@ -30,14 +30,14 @@
                     <td class="alinharDireita">Descrição:</td>
                     <td class="alinharEsquerda">${requestScope.classificacao.descricao}</td>
                 </tr>
-               
+
             </table>
-                <div class="frame">
-                <button class="custom-btn">
-                    <a href="${cp}/formularios/classificacao/listagem.jsp">
+            <div class="frame">
+                <a href="${cp}/formularios/classificacao/listagem.jsp">
+                    <button type="button" class="custom-btn btn-4">
                         Voltar
-                    </a>
-                </button>
+                    </button> 
+                </a>
                 <input type="submit" value="Excluir"/>
             </div>
 

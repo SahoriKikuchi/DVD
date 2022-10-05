@@ -73,14 +73,16 @@
         </table>
         <br>
         <div class = "frame">
-            <button class = "custom-btn btn-4">
-                <a href="${cp}/formularios/dvd/novo.jsp" >
+            <a href="${cp}/formularios/dvd/novo.jsp" >
+                <button type="button" class = "custom-btn btn-4">
                     Novo DVD
-                </a>
-            </button>
-            <button class = "custom-btn btn-4">
-                <a href="${cp}/index.jsp">Tela Inicial</a>
-            </button>
+                </button>
+            </a>
+            <a href="${cp}/index.jsp">
+                <button type="button" class = "custom-btn btn-4">
+                    Tela Inicial
+                </button>
+            </a>
         </div>
 
     </body>

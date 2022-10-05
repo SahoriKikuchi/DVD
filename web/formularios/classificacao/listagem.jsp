@@ -59,14 +59,17 @@
         </table>
         <br>
         <div class = "frame">
-            <button class = "custom-btn btn-4">
-                <a href="${cp}/formularios/classificacao/novo.jsp" >
+            <a href="${cp}/formularios/classificacao/novo.jsp" >
+                <button type="button" class = "custom-btn btn-4">
+
                     Nova classificação
-                </a>
-            </button>
-            <button class = "custom-btn btn-4">
-                <a href="${cp}/index.jsp">Tela Inicial</a>
-            </button>
+                </button>
+            </a>
+            <a href="${cp}/index.jsp">
+                <button type="button" class = "custom-btn btn-4">
+                    Tela Inicial
+                </button>
+            </a>
         </div>
     </body>
 </html>

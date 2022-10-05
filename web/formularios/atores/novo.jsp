@@ -11,64 +11,64 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Novo Ator</title>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="${cp}/css/style.css"/>
+    <head>
+        <title>Novo Ator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="${cp}/css/style.css"/>
 
-  </head>
+    </head>
 
-  <body>
+    <body>
 
-    <h1>Novo Ator</h1>
+        <h1>Novo Ator</h1>
 
-    <form method="post" action="${cp}/processaAtores">
+        <form method="post" action="${cp}/processaAtores">
 
-      <input name="acao" type="hidden" value="inserir"/>
+            <input name="acao" type="hidden" value="inserir"/>
 
-      <table>
-        <tr>
-          <td class="alinharCentro">Nome:</td>
-          <td class="alinharEsquerda">
-            <input name="nome"
-                   type="text"
-                   size="20"
-                   maxlength="30"
-                   required/>
-          </td>
-        </tr>
-        <tr>
-          <td class="alinharCentro">Sobrenome</td>
-          <td class="alinharEsquerda">
-            <input name="sobrenome"
-                   type="text"
-                   size="20"
-                   maxlength="30"
-                   required/>
-          </td>
-        </tr>
-        <tr>
-          <td class="alinharCentro">Data de Estreia: </td>
-          <td class="alinharEsquerda">
-            <input name="dataDeEstreia"
-                   type="Date"
-                   required/>
-          </td>
-        </tr>
-      </table>
-      
-      <div class = "frame">
-            <button class = "custom-btn btn-4">
-                <a href="${cp}/formularios/atores/listagem.jsp" >
+            <table>
+                <tr>
+                    <td class="alinharCentro">Nome:</td>
+                    <td class="alinharEsquerda">
+                        <input name="nome"
+                               type="text"
+                               size="20"
+                               maxlength="30"
+                               required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alinharCentro">Sobrenome</td>
+                    <td class="alinharEsquerda">
+                        <input name="sobrenome"
+                               type="text"
+                               size="20"
+                               maxlength="30"
+                               required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alinharCentro">Data de Estreia: </td>
+                    <td class="alinharEsquerda">
+                        <input name="dataDeEstreia"
+                               type="Date"
+                               required/>
+                    </td>
+                </tr>
+            </table>
+
+            <div class = "frame">
+                <a href="${cp}/formularios/atores/listagem.jsp">
+                    <button type="button" class="custom-btn btn-4">
                     Voltar
-                </a>
-            </button>
-            <input type="submit" value="Salvar"/>
-        </div>
-    </form>
+                </button>
+            </a>
+                <input type="submit" value="Salvar"/>
+            </div>
+        </form>
 
-  </body>
+    </body>
 
 </html>

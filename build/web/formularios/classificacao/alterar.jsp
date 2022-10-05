@@ -18,36 +18,36 @@
     </head>
     <body>
 
-    <h1>Alterar Classificação</h1>
+        <h1>Alterar Classificação</h1>
 
-    <form method="post" action="${cp}/processaClassificacao">
+        <form method="post" action="${cp}/processaClassificacao">
 
-      <input name="acao" type="hidden" value="alterar"/>
-      <input name="id" type="hidden" value="${requestScope.classificacao.id}"/>
+            <input name="acao" type="hidden" value="alterar"/>
+            <input name="id" type="hidden" value="${requestScope.classificacao.id}"/>
 
-      <table>
-        <tr>
-          <td class="alinharDireita">Nome:</td>
-          <td>
-            <input name="descricao"
-                   type="text"
-                   size="20"
-                   maxlength="255"
-                   value="${requestScope.classificacao.descricao}"/>
-          </td>
-        </tr>
-      </table>
-              
-              <div class = "frame">
-            <button class = "custom-btn btn-4">
+            <table>
+                <tr>
+                    <td class="alinharDireita">Nome:</td>
+                    <td>
+                        <input name="descricao"
+                               type="text"
+                               size="20"
+                               maxlength="255"
+                               value="${requestScope.classificacao.descricao}"/>
+                    </td>
+                </tr>
+            </table>
+
+            <div class = "frame">
                 <a href="${cp}/formularios/classificacao/listagem.jsp" >
-                    Voltar
+                    <button type="button" class = "custom-btn btn-4">
+                        Voltar
+                    </button> 
                 </a>
-            </button>
-            <input type="submit" value="Alterar"/>
-        </div>
+                <input type="submit" value="Alterar"/>
+            </div>
 
-    </form>
+        </form>
 
-  </body>
+    </body>
 </html>

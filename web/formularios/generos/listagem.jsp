@@ -61,13 +61,15 @@
 
         <br>
         <div class = "frame">
-        <button class = "custom-btn btn-4">
             <a href="${cp}/formularios/generos/novo.jsp" >
-                Novo Gênero
+                <button type="button" class = "custom-btn btn-4">
+                    Novo Gênero
+                </button>
             </a>
-        </button>
-        <button class = "custom-btn btn-4">
-            <a href="${cp}/index.jsp">Tela Inicial</a>
-        </button>
+            <a href="${cp}/index.jsp">
+                <button type="button" class = "custom-btn btn-4">
+                    Tela Inicial
+                </button>
+            </a>
     </body>
 </html>

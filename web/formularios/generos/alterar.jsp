@@ -17,37 +17,37 @@
     </head>
     <body>
 
-    <h1>Alterar Generos</h1>
+        <h1>Alterar Generos</h1>
 
-    <form method="post" action="${cp}/processaGenero">
+        <form method="post" action="${cp}/processaGenero">
 
-      <input name="acao" type="hidden" value="alterar"/>
-      <input name="id" type="hidden" value="${requestScope.generos.id}"/>
+            <input name="acao" type="hidden" value="alterar"/>
+            <input name="id" type="hidden" value="${requestScope.generos.id}"/>
 
-      <table>
-        <tr>
-          <td class="alinharDireita">Genero:</td>
-          <td>
-            <input name="genero"
-                   type="text"
-                   size="20"
-                   maxlength="255"
-                   value="${requestScope.generos.genero}"/>
-          </td>
-        </tr>
-        
-      </table>
-      <div class = "frame">
-                <button class = "custom-btn btn-4">
-                    <a href="${cp}/formularios/generos/listagem.jsp" >
+            <table>
+                <tr>
+                    <td class="alinharDireita">Genero:</td>
+                    <td>
+                        <input name="genero"
+                               type="text"
+                               size="20"
+                               maxlength="255"
+                               value="${requestScope.generos.genero}"/>
+                    </td>
+                </tr>
+
+            </table>
+            <div class = "frame">
+                <a href="${cp}/formularios/generos/listagem.jsp" >
+                    <button type="button" class = "custom-btn btn-4">
                         Voltar
-                    </a>
-                </button>
+                    </button>
+                </a>
                 <input type="submit" value="Alterar"/>
             </div>    
-          
 
-    </form>
 
-  </body>
+        </form>
+
+    </body>
 </html>
