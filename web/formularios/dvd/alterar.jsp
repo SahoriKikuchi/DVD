@@ -33,6 +33,7 @@
                                type="text"
                                size="20"
                                maxlength="120"
+                               value="${requestScope.dvd.titulo}"
                                required/>
                     </td>
                 </tr>
@@ -43,6 +44,7 @@
                                type="text"
                                size="20"
                                maxlength="4"
+                               value="${requestScope.dvd.anoDeLancamento}"
                                required/>
                     </td>
                 </tr>
@@ -87,6 +89,7 @@
                         <input name="dataDeLancamento"
                                type="date"
                                size="20"
+                               value="${requestScope.dvd.dataDeLancamento}"
                                required/>
                     </td>
                 </tr>
@@ -97,6 +100,7 @@
                                type="number"
                                size="25"
                                maxlength="11"
+                               value="${requestScope.dvd.duracao}"
                                required/>
                     </td>
                 </tr>
