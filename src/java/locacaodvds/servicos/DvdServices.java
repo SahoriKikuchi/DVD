@@ -11,12 +11,6 @@ import locacaodvds.entidade.Dvd;
  * @author Amanda e Lucas
  */
 public class DvdServices {
-    
-    /**
-     * Usa DvdDAO para obter todos os Dvd.
-     *
-     * @return Lista de DVDs.
-     */
     public List<Dvd> getTodos() {
 
         List<Dvd> lista = new ArrayList<>();

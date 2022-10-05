@@ -1,29 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package locacaodvds.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ *
+ * @author Amanda e Lucas
+ */
 public class ConnectionFactory {
-
-    /**
-     * O método getConnection retorna uma conexão com a base de dados
-     * cadastro_clientes.
-     *
-     * @return Uma conexão com o banco de dados cadastro_clientes.
-     * @throws SQLException Caso ocorra algum problema durante a conexão.
-     */
     public static Connection getConnection() throws SQLException {
-
-        // o método getConnection de DriverManager recebe como parâmetro
-        // a URL da base de dados, o usuário usado para conectar na base
-        // e a senha deste usuário.
-     
         return DriverManager.getConnection(
                 "jdbc:mariadb://localhost/locacao_dvds",
                 "root",
                 "" );
-
     }
-
 }

@@ -15,6 +15,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Alterar</title>
         <link rel="stylesheet" href="${cp}/css/style.css"/>
+        <link rel = "icon"  type = "image/gif" href="${cp}/img/background.gif"/>
     </head>
     <body>
 

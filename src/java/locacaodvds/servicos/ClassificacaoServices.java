@@ -11,12 +11,6 @@ import locacaodvds.entidade.Classificacao;
  * @author Amanda e Lucas
  */
 public class ClassificacaoServices {
-
-    /**
-     * Usa AtoresDAO para obter todos as Classificações.
-     *
-     * @return Lista de Classidicações.
-     */
     public List<Classificacao> getTodos() {
 
         List<Classificacao> lista = new ArrayList<>();

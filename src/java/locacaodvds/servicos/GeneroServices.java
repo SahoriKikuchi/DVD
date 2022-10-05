@@ -11,12 +11,6 @@ import locacaodvds.entidade.Genero;
  * @author Amanda e Lucas
  */
 public class GeneroServices {
-
-    /**
-     * Usa GeneroDAO para obter todos os Generôs.
-     *
-     * @return Lista de Generos.
-     */
     public List<Genero> getTodos() {
 
         List<Genero> lista = new ArrayList<>();

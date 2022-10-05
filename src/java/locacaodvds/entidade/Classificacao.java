@@ -6,7 +6,7 @@ package locacaodvds.entidade;
 
 /**
  *
- * @author amand
+ * @author Amanda e Lucas
  */
 public class Classificacao {
     private int id;

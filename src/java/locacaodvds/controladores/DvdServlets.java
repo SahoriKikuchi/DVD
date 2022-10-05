@@ -22,7 +22,7 @@ import locacaodvds.entidade.Genero;
 
 /**
  *
- * @author amand
+ * @author Amanda e Lucas
  */
 @WebServlet(name = "DvdServlets", urlPatterns = {"/processaDvds"})
 public class DvdServlets extends HttpServlet {

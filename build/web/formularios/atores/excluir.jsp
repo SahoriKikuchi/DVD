@@ -14,6 +14,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="${cp}/css/style.css"/>
+        <link rel = "icon"  type = "image/gif" href="${cp}/img/background.gif"/>
     </head>
 
     <body>

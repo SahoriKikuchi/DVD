@@ -14,10 +14,9 @@
     <head>
         <title>Novo Ator</title>
         <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="${cp}/css/style.css"/>
-
+        <link rel = "icon"  type = "image/gif" href="${cp}/img/background.gif"/>
     </head>
 
     <body>
@@ -62,9 +61,9 @@
             <div class = "frame">
                 <a href="${cp}/formularios/atores/listagem.jsp">
                     <button type="button" class="custom-btn btn-4">
-                    Voltar
-                </button>
-            </a>
+                        Voltar
+                    </button>
+                </a>
                 <input type="submit" value="Salvar"/>
             </div>
         </form>

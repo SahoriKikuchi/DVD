@@ -18,6 +18,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"  type="text/css" href="${cp}/css/style.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel = "icon"  type = "image/gif" href="${cp}/img/background.gif"/>
     </head>
     <body>
         <h1>Atores Cadastrados</h1>

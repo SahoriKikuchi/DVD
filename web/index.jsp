@@ -13,15 +13,14 @@
     <head>
         <title>Locadora</title>
         <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"  type="text/css" href="${cp}/css/style.css"/>
-
+        <link rel = "icon"  type = "image/gif" href="${cp}/img/background.gif"/>
     </head>
 
     <body>
 
-        <h1>Locadora de DVD</h1>
+        <h1>Locadora    de  DVD</h1>
 
         <div class = "cards-list">
             <div class ="card">
@@ -39,7 +38,7 @@
             <div class ="card">
                 <div class ="card_img">
                     <a href="${cp}/formularios/atores/listagem.jsp">
-                        <img src="${cp}/img/atorees.jpg">
+                        <img src="${cp}/img/img-ator.jpg">
                     </a>
                 </div>
                 <div class="card_title title-white">
@@ -51,7 +50,7 @@
             <div class ="card">
                 <div class ="card_img">
                     <a href="${cp}/formularios/classificacao/listagem.jsp">
-                        <img src="${cp}/img/classificacaoEtaria.jpg">
+                        <img src="${cp}/img/img-classificacao.jpg">
                     </a>
                 </div>
                 <div class="card_title title-white">
@@ -63,7 +62,7 @@
             <div class ="card">
                 <div class ="card_img">
                     <a href="${cp}/formularios/generos/listagem.jsp">
-                        <img src="${cp}/img/img-generos.jpg">
+                        <img src="${cp}/img/c.png">
                     </a>
                 </div>
                 <div class="card_title title-white">
@@ -74,6 +73,9 @@
             </div>
         </div>
 
+        <footer>
+            
+        </footer>
     </body>
 
 </html>

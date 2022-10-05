@@ -9,18 +9,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&display=swap');
- 
+
+@font-face {
+    font-family: "GoldenAge";
+    src: url('../fonts/Golden Age.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Rainy";
+    src: url('../fonts/rainyhearts.ttf') format('truetype');
+}
 
 body {
-    background: #93ccc6;
+    /*background: #93ccc6;*/
+    font-family: "Rainy";
+    font-size: 20px;
+    background-image: url('../img/grass.jpg');
 }
 
 h1 {
     position: relative;
     text-align: center;
     color: #353535;
-    font-size: 50px;
-    font-family: "Cormorant Garamond", serif;
+    font-size: 75px;
+    font-family: "GoldenAge";
 }
 
 /*Index*/
@@ -65,10 +76,10 @@ a:-webkit-any-link {
 .card .card_title {
     text-align: center;
     border-radius: 0px 0px 40px 40px;
-    font-family: sans-serif;
+    font-family: "Rainy";
     font-weight: bold;
-    font-size: 30px;
-    margin-top: -80px;
+    font-size: 50px;
+    margin-top: -100px;
     height: 40px;
 }
 
@@ -112,6 +123,7 @@ tr:hover {
     background-color: #e3dfba;
 }
 
+/* Formulários */
 i{
     color: black;
 }
@@ -123,6 +135,7 @@ i:hover {
 button{
     margin: 20px;
     outline: none;
+
 }
 
 button a {
@@ -134,7 +147,8 @@ button a {
     height: 40px;
     padding: 10px 25px;
     border: 2px solid #000;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Rainy";
+    font-size: 15px;
     font-weight: 500;
     background: transparent;
     cursor: pointer;
@@ -188,6 +202,9 @@ button a {
     width: 100%;
 }
 
+a{
+    font-family: "Rainy";
+}
 a:link {
     text-decoration: none;
     color: black;
@@ -224,27 +241,34 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     float: right;
+    font-family: "Rainy";
+    font-size: 15px;
+
 }
 
 input[type=submit]:hover {
     background-color: #65a675;
+    font-family: "Rainy";
+    font-size: 15px;
+
 }
 
 input[type=text], input[type=Date], select, input[type=Number] {
-  font-family: 'Nunito', sans-serif;
-  width: 80%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  text-align: left;
+    font-family: "Rainy";
+    font-size: 20px;
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    text-align: left;
 }
 
 
 .alinharDireita{
 
     width: 50%;
-    
+
 }
 .alinharEsquerda{
     text-align: left!important;
@@ -255,3 +279,5 @@ input[type=text], input[type=Date], select, input[type=Number] {
 .alinharCentro{
     text-align: center!important;
 }
+
+/*Footer*/

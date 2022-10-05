@@ -11,11 +11,6 @@ import locacaodvds.entidade.Atores;
  * @author Amanda e Lucas
  */
 public class AtoresServices {
-     /**
-     * Usa AtoresDAO para obter todos os Atores.
-     *
-     * @return Lista de Atores.
-     */
     public List<Atores> getTodos() {
 
         List<Atores> lista = new ArrayList<>();

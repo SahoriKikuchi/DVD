@@ -21,7 +21,7 @@ import locacaodvds.entidade.Genero;
 
 /**
  *
- * @author amand
+ * @author Amanda e Lucas
  */
 @WebServlet(name = "GeneroServlets", urlPatterns = {"/processaGenero"})
 public class GeneroServlets extends HttpServlet {
