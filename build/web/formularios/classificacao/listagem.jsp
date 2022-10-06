@@ -21,7 +21,7 @@
         <link rel = "icon"  type = "image/gif" href="${cp}/img/background.gif"/>
     </head>
     <body>
-        <h1>Classificações Cadastradas</h1>
+        <h1>Classificacoes Cadastradas</h1>
 
         <table>
             <thead>

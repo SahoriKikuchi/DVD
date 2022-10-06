@@ -113,13 +113,17 @@ table {
     text-align: center;
 }
 
+thead:hover, th{
+        background-color: transparent!important;
+}
+
 th, td {
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
-tr:hover {
+tr:hover > td{
     background-color: #e3dfba;
 }
 
