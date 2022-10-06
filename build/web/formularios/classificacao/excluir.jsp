@@ -27,8 +27,8 @@
 
             <table>
                 <tr>
-                    <td class="alinharDireita">Descrição:</td>
-                    <td class="alinharEsquerda">${requestScope.classificacao.descricao}</td>
+                    <td>Descrição:</td>
+                    <td>${requestScope.classificacao.descricao}</td>
                 </tr>
 
             </table>

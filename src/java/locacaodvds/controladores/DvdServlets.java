@@ -7,7 +7,9 @@ package locacaodvds.controladores;
 import java.io.IOException;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.time.Year;
+import java.time.format.DateTimeFormatter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,6 +33,8 @@ public class DvdServlets extends HttpServlet {
         String acao = request.getParameter("acao");
         DvdDAO dao = null;
         RequestDispatcher disp = null;
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
 
         try {
 
@@ -42,7 +46,7 @@ public class DvdServlets extends HttpServlet {
                 Year anoDeLancamento = Year.parse(request.getParameter( "anoDeLancamento" ) );
                 int atorPrincipal = Integer.parseInt(request.getParameter("atorPrincipal"));
                 int atorCoadjuvante = Integer.parseInt(request.getParameter("atorCoadjuvante"));
-                Date dataDeLancamento = Date.valueOf(request.getParameter( "dataDeLancamento" ));
+                Date dataDeLancamento = Date.valueOf(LocalDate.parse(request.getParameter( "dataDeLancamento" ),dtf));
                 int duracao = Integer.parseInt(request.getParameter( "duracao" ) );
                 int genero = Integer.parseInt(request.getParameter("genero"));
                 int classificacao = Integer.parseInt(request.getParameter("classificacao"));

@@ -264,16 +264,12 @@ input[type=text], input[type=Date], select, input[type=Number] {
     text-align: left;
 }
 
-
-.alinharDireita{
-
-    width: 50%;
-
+.alinharEsquerda{
+    text-align: right!important;
 }
+
 .alinharEsquerda{
     text-align: left!important;
-    /*padding-left: 40px;*/
-    width: 50%;
 }
 
 .alinharCentro{

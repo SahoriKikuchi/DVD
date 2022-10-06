@@ -27,7 +27,7 @@
 
             <table>
                 <tr>
-                    <td class="alinharDireita">Genero:</td>
+                    <td>Genero:</td>
                     <td>
                         <input name="genero"
                                type="text"

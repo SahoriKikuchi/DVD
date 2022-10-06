@@ -28,7 +28,7 @@
 
             <table>
                 <tr>
-                    <td class="alinharDireita">Genero:</td>
+                    <td>Genero:</td>
                     <td>${requestScope.generos.genero}</td>
                 </tr>
 

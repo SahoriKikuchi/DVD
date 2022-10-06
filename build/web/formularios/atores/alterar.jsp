@@ -27,7 +27,7 @@
 
             <table>
                 <tr>
-                    <td class="alinharDireita">Nome:</td>
+                    <td>Nome:</td>
                     <td>
                         <input name="nome"
                                type="text"
@@ -37,7 +37,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Sobrenome: </td>
+                    <td>Sobrenome: </td>
                     <td>
                         <input name="sobrenome"
                                type="text"
@@ -47,7 +47,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Data de estreia: </td>
+                    <td>Data de estreia: </td>
                     <td>
                         <input name="dataDeEstreia"
                                type="date"

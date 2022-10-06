@@ -29,36 +29,36 @@
 
             <table>
                 <tr>
-                    <td class="alinharDireita">Titulo:</td>
-                    <td class="alinharEsquerda">${requestScope.dvd.titulo}</td>
+                    <td>Titulo:</td>
+                    <td>${requestScope.dvd.titulo}</td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Ano de Lançamento:</td>
-                    <td class="alinharEsquerda">${requestScope.dvd.anoDeLancamento}</td>
+                    <td>Ano de Lançamento:</td>
+                    <td>${requestScope.dvd.anoDeLancamento}</td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Ator Principal: </td>
-                    <td class="alinharEsquerda">${requestScope.dvd.atorPrincipal.nome} ${requestScope.dvd.atorPrincipal.sobrenome}</td>
+                    <td>Ator Principal: </td>
+                    <td>${requestScope.dvd.atorPrincipal.nome} ${requestScope.dvd.atorPrincipal.sobrenome}</td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Ator Coadjuvante: </td>
-                    <td class="alinharEsquerda">${requestScope.dvd.atorCoadjuvante.nome} ${requestScope.dvd.atorCoadjuvante.sobrenome}</td>
+                    <td>Ator Coadjuvante: </td>
+                    <td>${requestScope.dvd.atorCoadjuvante.nome} ${requestScope.dvd.atorCoadjuvante.sobrenome}</td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Data de Lançamento: </td>
-                    <td class="alinharEsquerda">${requestScope.dvd.dataDeLancamento}</td>
+                    <td>Data de Lançamento: </td>
+                    <td>${requestScope.dvd.dataDeLancamento}</td>">${requestScope.dvd.dataDeLancamento}</td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Duração: </td>
-                    <td class="alinharEsquerda">${requestScope.dvd.duracao}</td>
+                    <td >Duração: </td>
+                    <td>${requestScope.dvd.duracao}</td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Gênero: </td>
-                    <td class="alinharEsquerda">${requestScope.dvd.genero.genero}</td>
+                    <td>Gênero: </td>
+                    <td>${requestScope.dvd.genero.genero}</td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Classificação: </td>
-                    <td class="alinharEsquerda">${requestScope.dvd.classificacao.descricao}</td>
+                    <td>Classificação: </td>
+                    <td>${requestScope.dvd.classificacao.descricao}</td>
                 </tr>
 
             </table>

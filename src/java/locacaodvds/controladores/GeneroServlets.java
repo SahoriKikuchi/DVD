@@ -30,7 +30,6 @@ public class GeneroServlets extends HttpServlet {
         String acao = request.getParameter("acao");
         GeneroDAO dao = null;
         RequestDispatcher disp = null;
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         try {
 

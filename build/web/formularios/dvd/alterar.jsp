@@ -27,7 +27,7 @@
 
             <table>
                 <tr>
-                    <td class="alinharDireita">Titulo: </td>
+                    <td>Titulo: </td>
                     <td>
                         <input name="titulo"
                                type="text"
@@ -38,7 +38,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Ano de Lançamento:</td>
+                    <td>Ano de Lançamento:</td>
                     <td>
                         <input name="anoDeLancamento"
                                type="text"
@@ -49,7 +49,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Ator Principal:</td>
+                    <td>Ator Principal:</td>
                     <td>
 
                         <jsp:useBean
@@ -67,7 +67,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Ator Coadjuvante:</td>
+                    <td>Ator Coadjuvante:</td>
                     <td>
                         <jsp:useBean
                             id="servicosAC"
@@ -84,7 +84,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Data De Lançamento:</td>
+                    <td>Data De Lançamento:</td>
                     <td>
                         <input name="dataDeLancamento"
                                type="date"
@@ -94,7 +94,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Duracao (min):</td>
+                    <td>Duracao (min):</td>
                     <td>
                         <input name="duracao"
                                type="number"
@@ -105,7 +105,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Genero:</td>
+                    <td>Genero:</td>
                     <td>
                         <jsp:useBean
                             id="servicos"
@@ -122,7 +122,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Classificação</td>
+                    <td>Classificação</td>
                     <td>
                         <jsp:useBean
                             id="servicosC"

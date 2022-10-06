@@ -28,16 +28,16 @@
 
             <table>
                 <tr>
-                    <td class="alinharDireita">Nome:</td>
-                    <td class="alinharEsquerda">${requestScope.atores.nome}</td>
+                    <td>Nome:</td>
+                    <td>${requestScope.atores.nome}</td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Sobrenome:</td>
-                    <td class="alinharEsquerda">${requestScope.atores.sobrenome}</td>
+                    <td>Sobrenome:</td>
+                    <td>${requestScope.atores.sobrenome}</td>
                 </tr>
                 <tr>
-                    <td class="alinharDireita">Data de Estreia: </td>
-                    <td class="alinharEsquerda">${requestScope.atores.dataDeEstreia}</td>
+                    <td>Data de Estreia: </td>
+                    <td>${requestScope.atores.dataDeEstreia}</td>
                 </tr>
 
             </table>

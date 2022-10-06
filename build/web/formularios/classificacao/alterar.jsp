@@ -28,7 +28,7 @@
 
             <table>
                 <tr>
-                    <td class="alinharDireita">Nome:</td>
+                    <td>Nome:</td>
                     <td>
                         <input name="descricao"
                                type="text"
